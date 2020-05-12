@@ -1,1 +1,4 @@
 *.yml
+*.swp
+*.swo
+dist/
