@@ -1,9 +1,14 @@
 # Test Builder
 
-A handy tool that allows you to build tests.
+A handy education tool that allows you to build and take tests.
+
+# Features
+
+- Compose tests using YAML
+- Questions shuffled and presented in random order
+- Answers shuffled and presented in random order
 
 # Tutorial
-
 
 Create a new file called `example.yml`. 
 

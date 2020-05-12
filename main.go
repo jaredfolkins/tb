@@ -115,17 +115,13 @@ questions:
   - answer: Books
   - answer: Electronics
 `
-const helpTxt = `TestBuilder %s
-A simple binary that allows easy construction of tests using yaml.
-
-Example
-%s
-
+const helpTxt = `TestBuilder : %s
+A simple binary that allows easy construction and taking of tests using yaml.
 `
 
 const empty = ""
 
-var Version string
+var version string
 
 var c *Course
 
@@ -161,7 +157,7 @@ func main() {
 		return
 	}
 
-	flag.PrintDefaults()
+	displayHelp()
 	return
 }
 
@@ -257,9 +253,8 @@ func exampleBuildCourse() *Course {
 }
 
 func displayHelp() {
-	c := exampleCourse()
-	y, _ := yaml.Marshal(&c)
-	fmt.Printf(helpTxt, Version, y)
+	fmt.Printf(helpTxt, version)
+	flag.PrintDefaults()
 }
 
 func fileExists(filename string) bool {
